@@ -1,3 +1,6 @@
+How Web Works Exercise
+Part One: Solidify Terminology
+
 What is HTTP? Hypertext Transfer Protocol - a standard way to send or receive data from a server
 What is a URL? - Uniform Resource Locator, this is your web address you type in for the resource you need
 What is DNS? - Domain Name System, this is the phonebook essentially that turns a web address into an IP address	
@@ -7,3 +10,9 @@ What is an HTTP request? - this is when the client asks the server for something
 What is an HTTP response? - this is when the server sends the client something back and it follows the http protocol
 What is an HTTP header? Give a couple examples of request and response headers you have seen. - Headers give you more information either about your request or the response you get back. Example 1) A response header might show you the last date something was modified  Example 2) A request header might be accept (to specify the type of file you get back such as html, js, or css) or accept-language (specifies the natural language the client prefers on the page)
 What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser? a) DNS creates an IP address from the URL b) The browswer then requests to that IP address, including the headers so we get the extra information c) The server will send a response that always includes a status code (200 is good but there are aother statuses it could send back) d)It then makes your DOM and finds the other resources needed such as your javascript and css e)The other resources involve separate requests so depending on what you are doing, that will determine if you want to have several requests or just one that may be a bit muddy
+
+
+Part Two: Practice Tools
+Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”. Answer) curl https://icanhazdadjoke.com/search\?term\=pirate
+Use dig to find what the IP address is for icanhazdadjoke.com. Answer) dig https://icanhazdadjoke.com/
+Make a simple web page and serve it using python3 -m http.server. Visit the page in a browser.  Answer) I attached screen shots of this (and also questions one and 2 together)
