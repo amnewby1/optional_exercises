@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Exercise Part 2</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" placeholder="Title" id="title">
+        <input type="number" placeholder="Rating" id="rating">
+        <button>Submit</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $("form").on('submit', function (e) {
+            e.preventDefault();
+            let title = $("#title").val();
+            let rating = $("#rating").val();
+            $("body").append(title, " ", rating, "<button class = 'remove'>Remove</button>");
+            $("form").trigger("reset");
+            $("body").on("click", ".remove", function () {
+                $(this).remove();//I know this will only remove the button I just created
+                //how do I remove the title and rating?
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>
